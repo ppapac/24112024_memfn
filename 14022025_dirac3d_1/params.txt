@@ -1,0 +1,17 @@
+alpha_op = 0.4
+alpha_ac = 1
+hbar_w_op = 0.02
+eta_0 = 5 * 10 ** (-3)
+M = 0.0
+Kf_20 = 0.26  # 20 K
+vf = 4 * 10**5
+a = 100 ** (1 / 3) * 10 ** (-10)
+T_0 = 20
+
+
+Ef = sqrt(Kf_20**2 + M**2)
+Kf_ = Kf_20 / hbar / vf * a  # unitless
+Kf_max = 1 / hbar / vf * a
+hbar_w_ac = 0.01 / Kf_max
+G_op2 = alpha_op
+G_ac2 = alpha_ac * hbar * vf / a
