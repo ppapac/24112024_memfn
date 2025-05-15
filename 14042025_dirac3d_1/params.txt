@@ -1,0 +1,22 @@
+kb = 8.6173303 * 10 ** (-5)
+hbar = 6.582119569 * 10 ** (-16)
+pi = np.pi
+
+alpha_op = 0.4
+alpha_ac = 1
+hbar_w_op = 0.02
+eta_0 = 5 * 10 ** (-3)
+M = 0.0
+Kf_20 = 0.26  # eV, Fermi at 20K
+vf = 4 * 10**5
+a = 100 ** (1 / 3) * 10 ** (-10)
+T_0 = 20
+
+
+Ef = sqrt(Kf_20**2 + M**2)
+Kf_ = Kf_20 / hbar / vf * a  # Fermi unitless
+Kf_max = 1 / hbar / vf * a  # cutoff 1eV unitless
+hbar_w_ac = 5 * 0.010 / Kf_max # phonon 
+c_s_tilde = hbar_w_ac * hbar * vf / a
+G_op2 = alpha_op
+G_ac2 = alpha_ac * hbar * vf / a
